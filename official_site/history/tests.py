@@ -6,7 +6,7 @@ from main import get_older_suspensions
 
 class TestGetSuspensions(TestCase):
 
-    @patch('history.main.requests.get')
+    @patch('official_site.history.main.requests.get')
     def test_status_code_ok(self, mock_get):
         mock_get.return_value.status_code = 200
         mock_get.return_value.content = """
